@@ -35,5 +35,6 @@ function render() {
 }
 form.addEventListener('input', render);
 form.addEventListener('change', render);
-form.addEventListener('reset', () => queueMicrotask(render));
+// The native reset default action happens after the reset event; a microtask is too early.
+form.addEventListener('reset', () => requestAnimationFrame(render));
 render();

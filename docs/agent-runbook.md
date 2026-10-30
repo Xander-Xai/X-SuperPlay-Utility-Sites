@@ -9,7 +9,7 @@ Your task is to conduct a reproducible review of the existing zero-dependency, l
 LLM VRAM Planner research prototype, not build a generalized SaaS or secretly deploy it.
 
 1. Verify GitHub URL and read current main + open PR diff before editing.
-2. Rerun npm run verify in a clean Node >=20 environment. Record exact runner/version and
+2. Rerun npm run verify in a clean Node >=20 environment. Test reset-after-invalid-input in a real browser (optional Python Playwright: `npm run browser:smoke`). Record exact runner/version and
    what was tested; lack of runner is NOT a pass.
 3. Adversarially inspect weight and KV cache equations against known dense-attention cases;
    explicitly record models/quantization/runtime features where estimate is invalid.

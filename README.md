@@ -25,7 +25,7 @@ npm run preview
 # Open http://localhost:8000 on your own machine.
 ```
 
-The first command runs 7 pure-math tests, a limited no-network/ad/static asset check and builds five **noindex** pages into `dist/`. This is not proof of production security, browser support or market fit. The preview command starts a **local server only**.
+The first command runs deterministic math and static-link/no-network tests, a limited no-ad/static asset check and builds five **noindex** pages into `dist/`. This is not proof of production security, browser support or market fit. The preview command explicitly binds to **127.0.0.1 only** (not all network interfaces). Optional real Chromium DOM smoke test: `npm run browser:smoke` after installing Python Playwright and a local Chromium executable; this is not part of the zero-dependency CI and must not be called a passed browser check unless actually run.
 
 ### What the prototype computes
 

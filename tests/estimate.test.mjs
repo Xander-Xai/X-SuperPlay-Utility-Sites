@@ -38,3 +38,28 @@ test('zero overhead/reserve remains calculable and quant types change weights',(
 test('output formatting always labels GiB',()=>{
   assert.equal(formatGiB(1.1234),'1.12 GiB');
 });
+
+test('rejects whitespace-only, boolean, arrays and missing input object',()=>{
+  for (const variant of [
+    {overheadPercent:'  '},{deviceReserveGiB:false},
+    {gpuGiB:[]},{kvBits:{}},{parametersB:true}
+  ]) assert.throws(()=>calculate({...DEFAULTS,...variant}),RangeError);
+  for (const bad of [undefined,null,false,1,''])
+    assert.throws(()=>calculate(bad),RangeError);
+});
+test('boundary equality and reserve exhaustion are cautious not guarantees',()=>{
+  const base=calculate(DEFAULTS);
+  const atLimit=calculate({...DEFAULTS,gpuGiB:base.neededGiB});
+  close(atLimit.headroomGiB,0);
+  assert.equal(atLimit.estimatedWithinCapacity,true);
+  const beyond=calculate({...DEFAULTS,deviceReserveGiB:200});
+  assert.equal(beyond.estimatedWithinCapacity,false);
+  assert.ok(beyond.note.includes('not'));
+});
+test('calculation does not mutate caller inputs and excludes key injection',()=>{
+  const args={...DEFAULTS,customSecret:'ignored'};
+  const before=JSON.stringify(args);
+  const result=calculate(args);
+  assert.equal(JSON.stringify(args),before);
+  assert.equal(Object.hasOwn(result.inputs,'customSecret'),false);
+});

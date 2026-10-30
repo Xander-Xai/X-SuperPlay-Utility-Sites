@@ -21,8 +21,12 @@ const GIB = 1024 ** 3;
 export function calculate(raw) {
   const x = {};
   for (const [key, [min, max]] of Object.entries(RANGES)) {
-    const value = Number(raw[key]);
-    if (raw[key] === '' || raw[key] === null || raw[key] === undefined ||
+    if (raw === null || typeof raw !== 'object') throw new RangeError('inputs must be an object');
+    const original = raw[key];
+    const value = Number(original);
+    if ((typeof original !== 'number' && typeof original !== 'string') ||
+        (typeof original === 'string' && !original.trim()) ||
+        original === null || original === undefined ||
         !Number.isFinite(value) || value < min || value > max ||
         (INTEGERS.has(key) && !Number.isInteger(value))) {
       throw new RangeError(`${key} must be ${INTEGERS.has(key) ? 'an integer ' : ''}between ${min} and ${max}`);

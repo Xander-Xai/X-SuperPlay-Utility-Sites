@@ -7,10 +7,10 @@
 ```bash
 node --version # Node >= 20
 npm run verify
-npm run preview # serves dist/ locally on port 8000, stop with Ctrl+C
+npm run preview # serves dist/ on 127.0.0.1:8000 ONLY, stop with Ctrl+C
 ```
 
-Verify locally: tool inputs, error feedback, keyboard use, math cases, responsive layout, visible limitations, links to About/Methodology/Privacy/Contact. These checks do not replace browser/a11y/penetration testing.
+Verify locally: tool inputs, error feedback, **reset-after-invalid-input**, keyboard use, math cases, responsive layout, visible limitations, links to About/Methodology/Privacy/Contact. These checks do not replace browser/a11y/penetration testing.
 
 ## If/when G3 is approved separately
 

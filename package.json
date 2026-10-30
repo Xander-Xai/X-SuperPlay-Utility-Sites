@@ -9,7 +9,10 @@
     "check": "node scripts/check.mjs",
     "build": "node scripts/build.mjs",
     "verify": "npm run test && npm run check && npm run build",
-    "preview": "python3 -m http.server 8000 --directory dist"
+    "preview": "python3 -m http.server 8000 --bind 127.0.0.1 --directory dist",
+    "browser:smoke": "python3 tests/browser-smoke.py"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }
