@@ -25,7 +25,7 @@ npm run preview
 # Open http://localhost:8000 on your own machine.
 ```
 
-The first command runs deterministic math and static-link/no-network tests, a limited no-ad/static asset check and builds five **noindex** pages into `dist/`. This is not proof of production security, browser support or market fit. The preview command explicitly binds to **127.0.0.1 only** (not all network interfaces). Optional real Chromium DOM smoke test: `npm run browser:smoke` after installing Python Playwright and a local Chromium executable; this is not part of the zero-dependency CI and must not be called a passed browser check unless actually run.
+The first command runs deterministic math and static-link/no-network tests, a limited no-ad/static asset check and builds five **noindex** pages into `dist/`. This is not proof of production security, cross-browser support or market fit. The preview command explicitly binds to **127.0.0.1 only** (not all network interfaces). Optional real Chromium DOM smoke test: `npm run browser:smoke` after installing Python Playwright and a local Chromium executable; this is not part of the zero-dependency CI and must not be called a passed browser check unless actually run.
 
 ### What the prototype computes
 
@@ -50,6 +50,8 @@ Read [cross-repo boundaries](docs/portfolio-links.md). No new `WS-xxx`, commerci
 
 | File | Purpose |
 |---|---|
+| [Second-pass engineering acceptance](docs/verification-20261030.md) | Real reset/loopback issues fixed; local test logs and remote CI runner blocker |
+| [G1 independent-user validation protocol](docs/G1-user-validation-protocol.md) | Consent-first comparison and runtime VRAM evidence; still NOT_RUN |
 | [AGENTS.md](AGENTS.md) | Safety/authority STOP boundaries for coding agents |
 | [G0/G1 market evidence](docs/market-evidence.md) | 20 **candidate** search intents (not volume), 12 competitors, 6 independent user problem anecdotes, contrarian market NO-GO |
 | [Prototype PRD](docs/mvp-spec.md) | Scope and acceptance criteria for offline math sample |
