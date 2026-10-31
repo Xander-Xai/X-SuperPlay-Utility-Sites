@@ -7,11 +7,11 @@ import os
 import re
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
-index=(ROOT/'public/index.html').read_text()
+index=(ROOT/'public/index.html').read_text(encoding='utf-8')
 index=re.sub(r'<script[^>]+src="/src/app.mjs"[^>]*></script>', '', index)
 index=index.replace('<link rel="stylesheet" href="/styles.css">','')
-calc=(ROOT/'src/estimate.mjs').read_text().replace('export const ','const ').replace('export function ','function ')
-app=(ROOT/'src/app.mjs').read_text().replace("import {DEFAULTS, calculate, formatGiB} from './estimate.mjs';",'')
+calc=(ROOT/'src/estimate.mjs').read_text(encoding='utf-8').replace('export const ','const ').replace('export function ','function ')
+app=(ROOT/'src/app.mjs').read_text(encoding='utf-8').replace("import {DEFAULTS, calculate, formatGiB} from './estimate.mjs';",'')
 with sync_playwright() as p:
     candidate=os.environ.get('CHROMIUM_PATH', '/usr/bin/chromium')
     executable=candidate if Path(candidate).is_file() else None
