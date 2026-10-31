@@ -1,2 +1,12 @@
 # X-SuperPlay-Utility-Sites
-Evidence-gated overseas utility tools: privacy-first browser utilities, source-backed SEO, reproducible tests, and honest monetization experiments.定位：面向海外开发者的免费专业工具实验仓库。  通过解决真实的高频工程问题，积累搜索流量、用户信任和可复用的网站资产；在验证网站使用价值之后，再考虑广告、专业服务转化或其他收费方式。
+
+## 当前产品方向（2026-10-31）
+
+**ReconCheck（核对通）—— 面向中小电商经营者的多平台结算与利润核对。**
+
+- 状态：`SELECTED_FOR_VALIDATION / DEVELOPMENT_ON_HOLD`（方向已选定，等待商业验证）。
+- 商业验证：未开始，尚无真实付款证据。
+- 开发：未授权；需完成内部流程验收并获得所有者明确授权。
+- 本仓库当前不包含产品代码；完整研究与财务模型不在公开仓库维护。
+
+> 仓库名为历史名称；早期海外工具实验不构成本方向授权。
