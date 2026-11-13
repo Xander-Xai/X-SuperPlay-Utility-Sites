@@ -14,7 +14,7 @@
 ## 全栈学习仓关联索引（2026-11-13）
 
 - **上游学习能力来源**：[X-SuperPlay-AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS)（知识/专项评分）。
-- **关联学习执行仓**：[X-SuperPlay-FullStack-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS)（[八周 Roadmap](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/blob/main/ROADMAP.md)，目前 `PLAN / NOT_RUN`）。
+- **关联学习执行仓**：[X-SuperPlay-FullStack-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS)（[V3.0（W1–W24）Roadmap](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/blob/main/ROADMAP.md)，目前 `PLAN / NOT_RUN`）。
 - **工程方法仓**：[X-SuperPlay-Dev-Workbench](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench)（工程生命周期、Skills、交付验收参考）。
 
 **边界保持不变**：本仓 ReconCheck 仍为 `SELECTED_FOR_VALIDATION / DEVELOPMENT_ON_HOLD`，缺少真实付款验证与明确开发授权。新增链接仅用于未来合规复用技术知识，**不代表产品开工、学习实验进入本仓、客户验收或生产发布**。
